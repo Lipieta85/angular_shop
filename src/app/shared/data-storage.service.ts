@@ -23,7 +23,7 @@ export class DataStorageService {
     }
 
     getShoppingListArray() {
-        return this.http.get<ShoppingList[]>('https://prodct-base.firebaseio.com/product.json').subscribe(
+        return this.http.get<ShoppingList[]>('https://rafal-shop.firebaseio.com/shopping-list.json').subscribe(
             (shoppingList) => {
                 this.slService.setShoppingList(shoppingList);
             }
