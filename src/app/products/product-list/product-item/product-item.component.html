@@ -1,12 +1,12 @@
 <div class="item">
   <a style="cursor: pointer;" [routerLink]="[index]" routerLinkActive="active" class="list-goup-item clearfix">
     <div class="pull-left">
-      <h4 class="list-group-item-heading">{{ product.name }}</h4>
-      <p>{{ product.description }}</p>
-      <p>Amount:{{ product.availableAmount }}</p>
-      <p>Price:{{ product.price }}$</p>
+      <h4 class="list-group-item-heading product">{{ product.name }}</h4>
+      <p class="product">{{ product.description }}</p>
+      <p class="product">Amount:{{ product.availableAmount }}</p>
+      <p class="product">Price:{{ product.price }}$</p>
     </div>
-    <span class="pull-left">
+    <span class="product">
       <img [src]="product.imgUrl" alt="{{ product.name }}" class="img-responsive" style="max-height: 50px">
     </span>
   </a>

@@ -14,7 +14,7 @@ export class DataStorageService {
         private slService: ShoppingListService) { }
 
     getProductsArray() {
-        return this.http.get<Product[]>('https://prodct-base.firebaseio.com/product.json')
+        return this.http.get<Product[]>('http://shoppingcartapi.hire.inwedo.com/items')
         .subscribe(
             (products: Product[]) => {
                 this.productService.setProducts(products);
@@ -23,7 +23,7 @@ export class DataStorageService {
     }
 
     getShoppingListArray() {
-        return this.http.get<ShoppingList[]>('https://rafal-shop.firebaseio.com/shopping-list.json').subscribe(
+        return this.http.get<ShoppingList[]>('https://prodct-base.firebaseio.com/product.json').subscribe(
             (shoppingList) => {
                 this.slService.setShoppingList(shoppingList);
             }

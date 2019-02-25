@@ -3,7 +3,12 @@
     border-radius: 5px;
     margin: 5px;
     padding: 8px;
+    text-align: center;
 }
 .item:hover {
     background-color: lightblue;
+}
+
+.product {
+    text-align: center;
 }
