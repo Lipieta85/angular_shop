@@ -1,14 +1,24 @@
+* {
+    color: black;
+}
+
 .item {
     border: 2px solid #CCC;
     border-radius: 5px;
     margin: 5px;
     padding: 8px;
     text-align: center;
+    background-color: #F8F8F8;
 }
+
+.image img {
+    margin: 0 auto;
+}
+
 .item:hover {
     background-color: lightblue;
 }
 
-.product {
-    text-align: center;
+.desc {
+    font-size: 11px;
 }

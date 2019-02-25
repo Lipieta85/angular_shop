@@ -14,7 +14,7 @@ export class DataStorageService {
         private slService: ShoppingListService) { }
 
     getProductsArray() {
-        return this.http.get<Product[]>('http://shoppingcartapi.hire.inwedo.com/items')
+        return this.http.get<Product[]>('https://prodct-base.firebaseio.com/product.json')
         .subscribe(
             (products: Product[]) => {
                 this.productService.setProducts(products);
