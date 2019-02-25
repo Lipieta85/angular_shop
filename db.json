@@ -1,0 +1,12 @@
+{
+  "shopping-list": [
+    {
+      "id": 1,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas volutpat erat fringilla accumsan ullamcorper. Fusce commodo nibh augue. Cras facilisis vel ipsum id porta. Donec cursus odio eu vulputate sagittis. Nunc vitae dictum metus. Nullam auctor, nisi eu laoreet mollis, mauris risus elementum dolor, vel tincidunt elit sem at magna. Vestibulum porta sapien in diam vulputate, eget imperdiet erat faucibus. Etiam interdum consequat ante sit amet auctor. Donec lobortis magna ac turpis varius, non ultricies elit condimentum. Aliquam semper lacinia velit, vel iaculis ex maximus eu.",
+      "imgUrl": "http://inwedo.com/wp-content/themes/inwedo/img/logo-on-white.png",
+      "name": "Monitor 1",
+      "availableAmount": 98,
+      "price": 200
+    }
+  ]
+}

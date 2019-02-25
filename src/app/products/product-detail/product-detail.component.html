@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img [src]="product.imgUrl" 
+         style="height: 100px" 
+         alt="{{ product.name }}" 
+         class="img-responsive">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{product.name}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-primary" 
+            (click)="onAddToShoppingList()" 
+            style="cursor: pointer;">Add to Shooping List
+    </button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p class="description">{{product.description}}</p>
+  </div>
+</div>
