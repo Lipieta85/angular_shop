@@ -22,6 +22,7 @@ import { CurrentTimeComponent } from './current-time/current-time.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AuthService } from './auth/auth.service';
+import { AuthGuard } from './auth/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { AuthService } from './auth/auth.service';
     AppRoutingModule
     //HttpModule,
   ],
-  providers: [ShoppingListService, ProductService, DataStorageService, AuthService],
+  providers: [ShoppingListService, ProductService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
