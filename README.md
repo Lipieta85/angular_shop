@@ -1,1 +1,1 @@
-https://lipieta85.github.io/angular_shop/
+https://lipieta85.github.io/angular_shop/signin
