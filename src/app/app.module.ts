@@ -19,6 +19,9 @@ import { ProductStartComponent } from './products/product-start/product-start.co
 import { ProductService } from './products/product.service';
 import { DataStorageService } from './shared/data-storage.service';
 import { CurrentTimeComponent } from './current-time/current-time.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { CurrentTimeComponent } from './current-time/current-time.component';
     ProductItemComponent,
     DropdownDirective,
     ProductStartComponent,
-    CurrentTimeComponent
+    CurrentTimeComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,7 @@ import { CurrentTimeComponent } from './current-time/current-time.component';
     AppRoutingModule
     //HttpModule,
   ],
-  providers: [ShoppingListService, ProductService, DataStorageService],
+  providers: [ShoppingListService, ProductService, DataStorageService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

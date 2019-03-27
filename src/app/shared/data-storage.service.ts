@@ -5,16 +5,20 @@ import { Product } from '../products/product.model';
 import { ProductService } from '../products/product.service';
 import { ShoppingList } from '../shared/shoppingList.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
+import { AuthService } from '../auth/auth.service';
 
 @Injectable()
 export class DataStorageService {
 
     constructor(private http: HttpClient,
         private productService: ProductService,
-        private slService: ShoppingListService) { }
+        private slService: ShoppingListService,
+        private authService: AuthService) { }
 
     getProductsArray() {
-        return this.http.get<Product[]>('https://prodct-base.firebaseio.com/product.json')
+        const token = this.authService.getIdToken();
+
+        return this.http.get<Product[]>('https://prodct-base.firebaseio.com/product.json?auth=' + token)
         .subscribe(
             (products: Product[]) => {
                 this.productService.setProducts(products);
@@ -23,7 +27,9 @@ export class DataStorageService {
     }
 
     getShoppingListArray() {
-        return this.http.get<ShoppingList[]>('https://rafal-shop.firebaseio.com/shopping-list.json').subscribe(
+        const token = this.authService.getIdToken();
+        
+        return this.http.get<ShoppingList[]>('https://prodct-base.firebaseio.com/shopping-list.json?auth=' + token).subscribe(
             (shoppingList) => {
                 this.slService.setShoppingList(shoppingList);
             }
@@ -31,6 +37,8 @@ export class DataStorageService {
     }
 
     addProductsToShoppingList() {
-        return this.http.put('https://rafal-shop.firebaseio.com/shopping-list.json', this.slService.getShoppingList());
+        const token = this.authService.getIdToken();
+
+        return this.http.put('https://prodct-base.firebaseio.com/shopping-list.json?auth=' + token, this.slService.getShoppingList());
     }
 }
